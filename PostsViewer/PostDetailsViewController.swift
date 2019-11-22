@@ -1,8 +1,9 @@
 import UIKit
+import SVProgressHUD
 
 class PostDetailsViewController: UIViewController {
   
-  private let postsAPI: PostUseCase = PostUseCaseAPI()
+  private let postsAPI = DI.dependecies.postUseCase
   
   private let cellClassName = String(describing: CommentCell.self)
   @IBOutlet private var tableView: UITableView!
@@ -36,15 +37,17 @@ class PostDetailsViewController: UIViewController {
     guard let postId = viewModel?.post.id else {
       return
     }
-    self.refresh.beginRefreshing()
+    SVProgressHUD.show()
     postsAPI.comments(postId: postId) { [weak self] result in
+      SVProgressHUD.dismiss()
       self?.refresh.endRefreshing()
       switch result {
       case .success(let comments):
         self?.dataSource = comments
         self?.tableView.reloadData()
       case .failure(let error):
-        self?.showAlert(message: "Comments loading failed")
+        SVProgressHUD.showError(withStatus: "Comments loading failed")
+        SVProgressHUD.dismiss(withDelay: Constants.hudDismissDelay)
         print(error.localizedDescription)
       }
     }

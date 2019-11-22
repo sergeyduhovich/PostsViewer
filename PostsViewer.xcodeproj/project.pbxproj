@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		366895D412BFFFBDE00C71DE /* Pods_PostsViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E6AF5EB76422AC6D32577 /* Pods_PostsViewer.framework */; };
 		EC48FB8F2386D341002F4194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FB8E2386D341002F4194 /* AppDelegate.swift */; };
 		EC48FB932386D341002F4194 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FB922386D341002F4194 /* RootViewController.swift */; };
 		EC48FB982386D342002F4194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC48FB972386D342002F4194 /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		EC48FBC62386E5B8002F4194 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBC42386E5B8002F4194 /* SettingsViewController.swift */; };
 		EC48FBC72386E5B8002F4194 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBC52386E5B8002F4194 /* SettingsViewController.xib */; };
 		EC48FBC92386E5E0002F4194 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBC82386E5E0002F4194 /* HomeController.swift */; };
-		EC48FBD02387DA56002F4194 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBCF2387DA56002F4194 /* UIViewController+Alert.swift */; };
 		EC48FBD22387E0CB002F4194 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBD12387E0CB002F4194 /* Post.swift */; };
 		EC48FBD42387E11A002F4194 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBD32387E11A002F4194 /* Comment.swift */; };
 		EC48FBD62387E15E002F4194 /* PostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBD52387E15E002F4194 /* PostUseCase.swift */; };
@@ -40,9 +40,21 @@
 		EC48FBE02387EFF4002F4194 /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBDE2387EFF4002F4194 /* PostDetailsViewController.xib */; };
 		EC48FBE32387F16A002F4194 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBE12387F16A002F4194 /* CommentCell.swift */; };
 		EC48FBE42387F16A002F4194 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBE22387F16A002F4194 /* CommentCell.xib */; };
+		EC48FBE623881845002F4194 /* UserUseCaseOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBE523881845002F4194 /* UserUseCaseOffline.swift */; };
+		EC48FBE923881B18002F4194 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBE823881B18002F4194 /* users.json */; };
+		EC48FBEB23881B43002F4194 /* users1.json in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBEA23881B43002F4194 /* users1.json */; };
+		EC48FBED23881BB2002F4194 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBEC23881BB2002F4194 /* posts.json */; };
+		EC48FBEF23881BF0002F4194 /* PostUseCaseOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBEE23881BF0002F4194 /* PostUseCaseOffline.swift */; };
+		EC48FBF123881CC4002F4194 /* posts1comments.json in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBF023881CC4002F4194 /* posts1comments.json */; };
+		EC48FBF323881CDE002F4194 /* posts1.josn in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBF223881CDE002F4194 /* posts1.josn */; };
+		EC48FBF5238824F4002F4194 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBF4238824F4002F4194 /* DI.swift */; };
+		EC48FBF723882C3C002F4194 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBF623882C3C002F4194 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		064FBC72CD639062242AD4DE /* Pods-PostsViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsViewer.debug.xcconfig"; path = "Target Support Files/Pods-PostsViewer/Pods-PostsViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		37A2451C711C99840082BDF6 /* Pods-PostsViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsViewer.release.xcconfig"; path = "Target Support Files/Pods-PostsViewer/Pods-PostsViewer.release.xcconfig"; sourceTree = "<group>"; };
+		5C9E6AF5EB76422AC6D32577 /* Pods_PostsViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC48FB8B2386D341002F4194 /* PostsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC48FB8E2386D341002F4194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC48FB922386D341002F4194 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +79,6 @@
 		EC48FBC42386E5B8002F4194 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EC48FBC52386E5B8002F4194 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		EC48FBC82386E5E0002F4194 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		EC48FBCF2387DA56002F4194 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		EC48FBD12387E0CB002F4194 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EC48FBD32387E11A002F4194 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EC48FBD52387E15E002F4194 /* PostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUseCase.swift; sourceTree = "<group>"; };
@@ -78,6 +89,15 @@
 		EC48FBDE2387EFF4002F4194 /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		EC48FBE12387F16A002F4194 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		EC48FBE22387F16A002F4194 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		EC48FBE523881845002F4194 /* UserUseCaseOffline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCaseOffline.swift; sourceTree = "<group>"; };
+		EC48FBE823881B18002F4194 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		EC48FBEA23881B43002F4194 /* users1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users1.json; sourceTree = "<group>"; };
+		EC48FBEC23881BB2002F4194 /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		EC48FBEE23881BF0002F4194 /* PostUseCaseOffline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUseCaseOffline.swift; sourceTree = "<group>"; };
+		EC48FBF023881CC4002F4194 /* posts1comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts1comments.json; sourceTree = "<group>"; };
+		EC48FBF223881CDE002F4194 /* posts1.josn */ = {isa = PBXFileReference; lastKnownFileType = text; path = posts1.josn; sourceTree = "<group>"; };
+		EC48FBF4238824F4002F4194 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		EC48FBF623882C3C002F4194 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +105,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366895D412BFFFBDE00C71DE /* Pods_PostsViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53C07EA5AA9502A2992008AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C9E6AF5EB76422AC6D32577 /* Pods_PostsViewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		588DCB317CEBE6D1F6520498 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				064FBC72CD639062242AD4DE /* Pods-PostsViewer.debug.xcconfig */,
+				37A2451C711C99840082BDF6 /* Pods-PostsViewer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EC48FB822386D341002F4194 = {
 			isa = PBXGroup;
 			children = (
 				EC48FB8D2386D341002F4194 /* PostsViewer */,
 				EC48FB8C2386D341002F4194 /* Products */,
+				588DCB317CEBE6D1F6520498 /* Pods */,
+				53C07EA5AA9502A2992008AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,8 +150,9 @@
 		EC48FB8D2386D341002F4194 /* PostsViewer */ = {
 			isa = PBXGroup;
 			children = (
+				EC48FBF4238824F4002F4194 /* DI.swift */,
+				EC48FBF623882C3C002F4194 /* Constants.swift */,
 				EC48FB8E2386D341002F4194 /* AppDelegate.swift */,
-				EC48FBCF2387DA56002F4194 /* UIViewController+Alert.swift */,
 				EC48FB922386D341002F4194 /* RootViewController.swift */,
 				EC48FBBC2386DA56002F4194 /* LoginViewController.swift */,
 				EC48FBC02386DCF0002F4194 /* LoginViewController.xib */,
@@ -122,6 +163,7 @@
 				EC48FBC42386E5B8002F4194 /* SettingsViewController.swift */,
 				EC48FBC52386E5B8002F4194 /* SettingsViewController.xib */,
 				EC48FBC82386E5E0002F4194 /* HomeController.swift */,
+				EC48FBE723881B07002F4194 /* JSON */,
 				EC48FBCA2386EDB7002F4194 /* Cells */,
 				EC48FBB92386D818002F4194 /* UseCaseImplementations */,
 				EC48FBB62386D715002F4194 /* UseCases */,
@@ -173,6 +215,8 @@
 				EC48FBAD2386D657002F4194 /* UserUseCaseAPI.swift */,
 				EC48FBD72387E1BD002F4194 /* PostUseCaseAPI.swift */,
 				EC48FBBA2386D87F002F4194 /* AuthorizationUseCaseDefaults.swift */,
+				EC48FBE523881845002F4194 /* UserUseCaseOffline.swift */,
+				EC48FBEE23881BF0002F4194 /* PostUseCaseOffline.swift */,
 			);
 			path = UseCaseImplementations;
 			sourceTree = "<group>";
@@ -188,6 +232,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		EC48FBE723881B07002F4194 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EC48FBE823881B18002F4194 /* users.json */,
+				EC48FBEA23881B43002F4194 /* users1.json */,
+				EC48FBEC23881BB2002F4194 /* posts.json */,
+				EC48FBF223881CDE002F4194 /* posts1.josn */,
+				EC48FBF023881CC4002F4194 /* posts1comments.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC48FB9F2386D342002F4194 /* Build configuration list for PBXNativeTarget "PostsViewer" */;
 			buildPhases = (
+				A6A396A95799EA63CEBE6D98 /* [CP] Check Pods Manifest.lock */,
 				EC48FB872386D341002F4194 /* Sources */,
 				EC48FB882386D341002F4194 /* Frameworks */,
 				EC48FB892386D341002F4194 /* Resources */,
+				F9E98DC56CFC328DDF109B23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,16 +306,63 @@
 			files = (
 				EC48FBE02387EFF4002F4194 /* PostDetailsViewController.xib in Resources */,
 				EC48FBC32386DD10002F4194 /* PostsViewController.xib in Resources */,
+				EC48FBED23881BB2002F4194 /* posts.json in Resources */,
 				EC48FBDC2387E801002F4194 /* PostCell.xib in Resources */,
+				EC48FBE923881B18002F4194 /* users.json in Resources */,
 				EC48FBE42387F16A002F4194 /* CommentCell.xib in Resources */,
 				EC48FB9B2386D342002F4194 /* LaunchScreen.storyboard in Resources */,
 				EC48FB982386D342002F4194 /* Assets.xcassets in Resources */,
+				EC48FBF123881CC4002F4194 /* posts1comments.json in Resources */,
 				EC48FBC12386DCF0002F4194 /* LoginViewController.xib in Resources */,
 				EC48FBC72386E5B8002F4194 /* SettingsViewController.xib in Resources */,
+				EC48FBEB23881B43002F4194 /* users1.json in Resources */,
+				EC48FBF323881CDE002F4194 /* posts1.josn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6A396A95799EA63CEBE6D98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostsViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E98DC56CFC328DDF109B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PostsViewer/Pods-PostsViewer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PostsViewer/Pods-PostsViewer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PostsViewer/Pods-PostsViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC48FB872386D341002F4194 /* Sources */ = {
@@ -275,6 +380,7 @@
 				EC48FBC62386E5B8002F4194 /* SettingsViewController.swift in Sources */,
 				EC48FBC92386E5E0002F4194 /* HomeController.swift in Sources */,
 				EC48FBD42387E11A002F4194 /* Comment.swift in Sources */,
+				EC48FBF723882C3C002F4194 /* Constants.swift in Sources */,
 				EC48FBBB2386D87F002F4194 /* AuthorizationUseCaseDefaults.swift in Sources */,
 				EC48FBD82387E1BD002F4194 /* PostUseCaseAPI.swift in Sources */,
 				EC48FBB52386D6A2002F4194 /* Fetchable.swift in Sources */,
@@ -283,11 +389,13 @@
 				EC48FBB32386D6A2002F4194 /* LocalFileStorage.swift in Sources */,
 				EC48FBAE2386D657002F4194 /* UserUseCaseAPI.swift in Sources */,
 				EC48FBD62387E15E002F4194 /* PostUseCase.swift in Sources */,
-				EC48FBD02387DA56002F4194 /* UIViewController+Alert.swift in Sources */,
+				EC48FBEF23881BF0002F4194 /* PostUseCaseOffline.swift in Sources */,
+				EC48FBF5238824F4002F4194 /* DI.swift in Sources */,
 				EC48FBA82386D56C002F4194 /* Company.swift in Sources */,
 				EC48FB8F2386D341002F4194 /* AppDelegate.swift in Sources */,
 				EC48FBDF2387EFF4002F4194 /* PostDetailsViewController.swift in Sources */,
 				EC48FBDB2387E801002F4194 /* PostCell.swift in Sources */,
+				EC48FBE623881845002F4194 /* UserUseCaseOffline.swift in Sources */,
 				EC48FBD22387E0CB002F4194 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +530,7 @@
 		};
 		EC48FBA02386D342002F4194 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 064FBC72CD639062242AD4DE /* Pods-PostsViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +550,7 @@
 		};
 		EC48FBA12386D342002F4194 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A2451C711C99840082BDF6 /* Pods-PostsViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,8 +1,9 @@
-import UIKit 
+import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
   
-  private let authorization: AuthorizationUseCase = AuthorizationUseCaseDefaults()
+  private let authorization = DI.dependecies.authorization
   
   @IBOutlet private var identifierField: UITextField!
   @IBOutlet private var passwordField: UITextField!
@@ -26,16 +27,21 @@ class LoginViewController: UIViewController {
   
   @IBAction func loginAction() {
     guard let userId = identifierField.text.flatMap(Int.init) else {
-      showAlert(message: "Wrong identifier format")
+      SVProgressHUD.showError(withStatus: "Wrong identifier format")
+      SVProgressHUD.dismiss(withDelay: Constants.hudDismissDelay)
       return
     }
     
-    authorization.authorise(userId: userId) { [weak self] result in
+    SVProgressHUD.show()
+    authorization.authorise(userId: userId) { result in
+      SVProgressHUD.dismiss()
       switch result {
       case .success(let user):
         print("logined user \(user.username)")
       case .failure(let error):
-        self?.showAlert(message: error.localizedDescription)
+        SVProgressHUD.showError(withStatus: "Authorization failed")
+        SVProgressHUD.dismiss(withDelay: Constants.hudDismissDelay)
+        print(error.localizedDescription)
       }
     }
   }

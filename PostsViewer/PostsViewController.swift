@@ -1,4 +1,5 @@
 import UIKit
+import SVProgressHUD
 
 struct PostViewModel {
   let post: Post
@@ -7,11 +8,12 @@ struct PostViewModel {
 
 class PostsViewController: UIViewController {
  
-  private let usersAPI: UserUseCase = UserUseCaseAPI()
-  private let postsAPI: PostUseCase = PostUseCaseAPI()
+  private let usersAPI = DI.dependecies.userUseCase
+  private let postsAPI = DI.dependecies.postUseCase
   
   private let cellClassName = String(describing: PostCell.self)
   @IBOutlet private var tableView: UITableView!
+  private let refresh = UIRefreshControl()
   private let group = DispatchGroup()
   
   private var dataSource: [PostViewModel] = []
@@ -27,7 +29,14 @@ class PostsViewController: UIViewController {
     tableView.delegate = self
     
     tableView.register(UINib.init(nibName: cellClassName, bundle: nil), forCellReuseIdentifier: cellClassName)
+    tableView.refreshControl = refresh
     
+    refresh.addTarget(self, action: #selector(reloadPosts), for: .valueChanged)
+    
+    reloadPosts()
+  }
+  
+  @objc private func reloadPosts() {
     group.enter()
     postsAPI.allPosts { [weak self] result in
       if case .success(let posts) = result {
@@ -48,14 +57,18 @@ class PostsViewController: UIViewController {
       self?.group.leave()
     }
     
+    SVProgressHUD.show()
     group.notify(queue: DispatchQueue.main) {
+      SVProgressHUD.dismiss()
+      self.refresh.endRefreshing()
       self.processResponses()
     }
   }
   
   private func processResponses() {
     guard let users = users, let posts = posts else {
-      showAlert(message: "Posts loading failed")
+      SVProgressHUD.showError(withStatus: "Posts loading failed")
+      SVProgressHUD.dismiss(withDelay: Constants.hudDismissDelay)
       return
     }
     
@@ -87,14 +100,17 @@ extension PostsViewController: UITableViewDataSource {
     cell.viewModel = viewModel
     
     cell.userAction = { [weak self] in
+      SVProgressHUD.show()
       self?.usersAPI.details(userId: viewModel.user.id, completion: { [weak self] result in
+        SVProgressHUD.dismiss()
         switch result {
         case .success(let user):
           let controller = SettingsViewController()
           controller.user = user
           self?.navigationController?.pushViewController(controller, animated: true)
         case .failure(let error):
-          self?.showAlert(message: "User loading failed")
+          SVProgressHUD.showError(withStatus: "User loading failed")
+          SVProgressHUD.dismiss(withDelay: Constants.hudDismissDelay)
           print(error.localizedDescription)
         }
       })

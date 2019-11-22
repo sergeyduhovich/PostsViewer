@@ -4,7 +4,8 @@ class AuthorizationUseCaseDefaults: AuthorizationUseCase {
   
   static let authorizationChangedNotification = NSNotification.Name("authorizationChangedNotification")
   
-  init() {
+  init(userUseCase: UserUseCase) {
+    self.userUseCase = userUseCase
     NotificationCenter.default.addObserver(forName: AuthorizationUseCaseDefaults.authorizationChangedNotification, object: nil, queue: nil) { [weak self] _ in
       self?.authorizationChanged()
     }
@@ -14,7 +15,7 @@ class AuthorizationUseCaseDefaults: AuthorizationUseCase {
     NotificationCenter.default.removeObserver(self)
   }
   
-  private let userUseCase: UserUseCase = UserUseCaseAPI()
+  private let userUseCase: UserUseCase
   private let userIdKey = "currentUserId"
   private let queue: DispatchQueue = DispatchQueue(label: "AuthorizationQueue", attributes: [.concurrent])
   

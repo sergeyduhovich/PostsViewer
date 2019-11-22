@@ -1,11 +1,5 @@
 import UIKit
-
-enum Constants {
-  enum Colors {
-    static let epamBlueColor = UIColor(red: 0.4609375, green: 0.80078125, blue: 0.84375, alpha: 1)
-  }
-}
-
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     configureStyle()
     
+    DI.dependecies = OfflineDependencies()
+    
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = RootViewController()
     window?.makeKeyAndVisible()
@@ -29,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func configureStyle() {
     UITabBar.appearance().barTintColor = UIColor.white
     UITabBar.appearance().tintColor = Constants.Colors.epamBlueColor
+    
+    SVProgressHUD.setDefaultStyle(.custom)
+    SVProgressHUD.setDefaultMaskType(.black)
+    SVProgressHUD.setForegroundColor(Constants.Colors.epamBlueColor)
 
     UINavigationBar.appearance().tintColor = UIColor.white
     UINavigationBar.appearance().barTintColor = Constants.Colors.epamBlueColor

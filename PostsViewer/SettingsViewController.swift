@@ -1,9 +1,10 @@
 import UIKit
+import SVProgressHUD
 
 class SettingsViewController: UIViewController {
   
-  private let authorization: AuthorizationUseCase = AuthorizationUseCaseDefaults()
-  private let userCase: UserUseCase = UserUseCaseAPI()
+  private let authorization = DI.dependecies.authorization
+  private let userCase = DI.dependecies.userUseCase
   
   @IBOutlet private var name: UILabel!
   @IBOutlet private var username: UILabel!
@@ -30,23 +31,26 @@ class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    logoutButton.setTitle("logout", for: .normal)
+    logoutButton.tintColor = Constants.Colors.epamBlueColor
+    updateView()
+    
     if user == nil {
       guard let userId = authorization.currentUserId() else {
         return
       }
+      SVProgressHUD.show()
       userCase.details(userId: userId) { [weak self] result in
+        SVProgressHUD.dismiss()
         switch result {
         case .success(let user):
           self?.user = user
-        case .failure(let error):
-          self?.showAlert(message: error.localizedDescription)
+        case .failure(_):
+          SVProgressHUD.showError(withStatus: "User loading failed")
+          SVProgressHUD.dismiss(withDelay: Constants.hudDismissDelay)
         }
       }
     }
-    
-    logoutButton.setTitle("logout", for: .normal)
-    logoutButton.tintColor = Constants.Colors.epamBlueColor
-    updateView()
   }
   
   @IBAction func logoutAction() {
