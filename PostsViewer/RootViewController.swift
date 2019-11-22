@@ -2,7 +2,7 @@ import UIKit
 
 class RootViewController: UIViewController {
   
-  private var authorization = DI.dependecies.authorization
+  private var authorization = DI.dependencies.authorization
   
   override func viewDidLoad() {
     super.viewDidLoad()

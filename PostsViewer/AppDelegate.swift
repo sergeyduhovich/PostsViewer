@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     configureStyle()
     
-    DI.dependecies = OfflineDependencies()
+    DI.dependencies = OfflineDependencies()
     
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = RootViewController()

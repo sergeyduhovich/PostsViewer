@@ -3,7 +3,7 @@ import SVProgressHUD
 
 class PostDetailsViewController: UIViewController {
   
-  private let postsAPI = DI.dependecies.postUseCase
+  private let postsAPI = DI.dependencies.postUseCase
   
   private let cellClassName = String(describing: CommentCell.self)
   @IBOutlet private var tableView: UITableView!

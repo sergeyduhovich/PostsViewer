@@ -3,7 +3,7 @@ import SVProgressHUD
 
 class LoginViewController: UIViewController {
   
-  private let authorization = DI.dependecies.authorization
+  private let authorization = DI.dependencies.authorization
   
   @IBOutlet private var identifierField: UITextField!
   @IBOutlet private var passwordField: UITextField!

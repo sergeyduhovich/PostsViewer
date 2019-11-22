@@ -8,8 +8,8 @@ struct PostViewModel {
 
 class PostsViewController: UIViewController {
  
-  private let usersAPI = DI.dependecies.userUseCase
-  private let postsAPI = DI.dependecies.postUseCase
+  private let usersAPI = DI.dependencies.userUseCase
+  private let postsAPI = DI.dependencies.postUseCase
   
   private let cellClassName = String(describing: PostCell.self)
   @IBOutlet private var tableView: UITableView!

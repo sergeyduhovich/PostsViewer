@@ -3,8 +3,8 @@ import SVProgressHUD
 
 class SettingsViewController: UIViewController {
   
-  private let authorization = DI.dependecies.authorization
-  private let userCase = DI.dependecies.userUseCase
+  private let authorization = DI.dependencies.authorization
+  private let userCase = DI.dependencies.userUseCase
   
   @IBOutlet private var name: UILabel!
   @IBOutlet private var username: UILabel!

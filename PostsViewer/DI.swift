@@ -1,18 +1,18 @@
 import Foundation
 
 struct DI {
-  private static var _dependecies: Dependencies!
+  private static var _dependencies: Dependencies!
   private static let queue: DispatchQueue = DispatchQueue(label: "DependenciesQueue", attributes: [.concurrent])
   
-  static var dependecies: Dependencies {
+  static var dependencies: Dependencies {
     get {
       queue.sync {
-        return _dependecies
+        return _dependencies
       }
     }
     set {
       queue.sync(flags: .barrier) {
-        _dependecies = newValue
+        _dependencies = newValue
       }
     }
   }
