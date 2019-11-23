@@ -18,4 +18,8 @@ class HomeController: UITabBarController {
       settings
     ]
   }
+  
+  deinit {
+    print("\(#file) \(#function)")
+  }
 }

@@ -1,6 +1,9 @@
 import UIKit
+import RxSwift
 
 class RootViewController: UIViewController {
+  
+  private let disposeBag = DisposeBag()
   
   private var authorization = DI.dependencies.authorization
   
@@ -8,10 +11,11 @@ class RootViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = UIColor.white
     
-    authorization
-      .authorizationChanged = { [weak self] in
+    authorization.rx_authorizationChanged
+      .subscribe(onNext: { [weak self] _ in
         self?.updateChildController()
-    }
+      })
+      .disposed(by: disposeBag)
     
     updateChildController()
   }

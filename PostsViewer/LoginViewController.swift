@@ -45,4 +45,8 @@ class LoginViewController: UIViewController {
       }
     }
   }
+  
+  deinit {
+    print("\(#file) \(#function)")
+  }
 }

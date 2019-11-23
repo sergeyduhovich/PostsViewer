@@ -79,4 +79,8 @@ class SettingsViewController: UIViewController {
       title = user?.name
     }
   }
+  
+  deinit {
+    print("\(#file) \(#function)")
+  }
 }

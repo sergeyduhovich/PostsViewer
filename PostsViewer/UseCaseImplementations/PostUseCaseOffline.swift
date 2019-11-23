@@ -1,4 +1,5 @@
 import Foundation
+import RxSwift
 
 enum PostUseCaseOfflineError: Error {
   case fileNotFound
@@ -66,3 +67,5 @@ class PostUseCaseOffline: PostUseCase {
     }
   }
 }
+
+extension PostUseCaseOffline: ReactiveCompatible {}

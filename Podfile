@@ -5,5 +5,7 @@ target 'PostsViewer' do
   use_frameworks!
 
   pod 'SVProgressHUD'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end

@@ -49,6 +49,11 @@
 		EC48FBF323881CDE002F4194 /* posts1.josn in Resources */ = {isa = PBXBuildFile; fileRef = EC48FBF223881CDE002F4194 /* posts1.josn */; };
 		EC48FBF5238824F4002F4194 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBF4238824F4002F4194 /* DI.swift */; };
 		EC48FBF723882C3C002F4194 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBF623882C3C002F4194 /* Constants.swift */; };
+		EC48FBF923883A12002F4194 /* UserUseCase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBF823883A12002F4194 /* UserUseCase+Rx.swift */; };
+		EC48FBFB23883A3B002F4194 /* PostUseCase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBFA23883A3B002F4194 /* PostUseCase+Rx.swift */; };
+		EC48FBFD23883CD0002F4194 /* Completion+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBFC23883CD0002F4194 /* Completion+Rx.swift */; };
+		EC48FBFF2388484D002F4194 /* AuthorizationUseCase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FBFE2388484D002F4194 /* AuthorizationUseCase+Rx.swift */; };
+		EC48FC01238BB85B002F4194 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC48FC00238BB85B002F4194 /* SVProgressHUD+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +103,11 @@
 		EC48FBF223881CDE002F4194 /* posts1.josn */ = {isa = PBXFileReference; lastKnownFileType = text; path = posts1.josn; sourceTree = "<group>"; };
 		EC48FBF4238824F4002F4194 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		EC48FBF623882C3C002F4194 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC48FBF823883A12002F4194 /* UserUseCase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserUseCase+Rx.swift"; sourceTree = "<group>"; };
+		EC48FBFA23883A3B002F4194 /* PostUseCase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostUseCase+Rx.swift"; sourceTree = "<group>"; };
+		EC48FBFC23883CD0002F4194 /* Completion+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Completion+Rx.swift"; sourceTree = "<group>"; };
+		EC48FBFE2388484D002F4194 /* AuthorizationUseCase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthorizationUseCase+Rx.swift"; sourceTree = "<group>"; };
+		EC48FC00238BB85B002F4194 /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				EC48FBF4238824F4002F4194 /* DI.swift */,
+				EC48FC00238BB85B002F4194 /* SVProgressHUD+Rx.swift */,
 				EC48FBF623882C3C002F4194 /* Constants.swift */,
 				EC48FB8E2386D341002F4194 /* AppDelegate.swift */,
 				EC48FB922386D341002F4194 /* RootViewController.swift */,
@@ -202,9 +213,13 @@
 		EC48FBB62386D715002F4194 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				EC48FBFC23883CD0002F4194 /* Completion+Rx.swift */,
 				EC48FBA22386D533002F4194 /* UserUseCase.swift */,
+				EC48FBF823883A12002F4194 /* UserUseCase+Rx.swift */,
 				EC48FBD52387E15E002F4194 /* PostUseCase.swift */,
+				EC48FBFA23883A3B002F4194 /* PostUseCase+Rx.swift */,
 				EC48FBB72386D78B002F4194 /* AuthorizationUseCase.swift */,
+				EC48FBFE2388484D002F4194 /* AuthorizationUseCase+Rx.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -376,25 +391,30 @@
 				EC48FBB82386D78B002F4194 /* AuthorizationUseCase.swift in Sources */,
 				EC48FBE32387F16A002F4194 /* CommentCell.swift in Sources */,
 				EC48FBA62386D561002F4194 /* User.swift in Sources */,
+				EC48FBFF2388484D002F4194 /* AuthorizationUseCase+Rx.swift in Sources */,
 				EC48FB932386D341002F4194 /* RootViewController.swift in Sources */,
 				EC48FBC62386E5B8002F4194 /* SettingsViewController.swift in Sources */,
 				EC48FBC92386E5E0002F4194 /* HomeController.swift in Sources */,
 				EC48FBD42387E11A002F4194 /* Comment.swift in Sources */,
 				EC48FBF723882C3C002F4194 /* Constants.swift in Sources */,
 				EC48FBBB2386D87F002F4194 /* AuthorizationUseCaseDefaults.swift in Sources */,
+				EC48FC01238BB85B002F4194 /* SVProgressHUD+Rx.swift in Sources */,
 				EC48FBD82387E1BD002F4194 /* PostUseCaseAPI.swift in Sources */,
 				EC48FBB52386D6A2002F4194 /* Fetchable.swift in Sources */,
+				EC48FBFB23883A3B002F4194 /* PostUseCase+Rx.swift in Sources */,
 				EC48FBBF2386DCA9002F4194 /* PostsViewController.swift in Sources */,
 				EC48FBA32386D533002F4194 /* UserUseCase.swift in Sources */,
 				EC48FBB32386D6A2002F4194 /* LocalFileStorage.swift in Sources */,
 				EC48FBAE2386D657002F4194 /* UserUseCaseAPI.swift in Sources */,
 				EC48FBD62387E15E002F4194 /* PostUseCase.swift in Sources */,
 				EC48FBEF23881BF0002F4194 /* PostUseCaseOffline.swift in Sources */,
+				EC48FBF923883A12002F4194 /* UserUseCase+Rx.swift in Sources */,
 				EC48FBF5238824F4002F4194 /* DI.swift in Sources */,
 				EC48FBA82386D56C002F4194 /* Company.swift in Sources */,
 				EC48FB8F2386D341002F4194 /* AppDelegate.swift in Sources */,
 				EC48FBDF2387EFF4002F4194 /* PostDetailsViewController.swift in Sources */,
 				EC48FBDB2387E801002F4194 /* PostCell.swift in Sources */,
+				EC48FBFD23883CD0002F4194 /* Completion+Rx.swift in Sources */,
 				EC48FBE623881845002F4194 /* UserUseCaseOffline.swift in Sources */,
 				EC48FBD22387E0CB002F4194 /* Post.swift in Sources */,
 			);

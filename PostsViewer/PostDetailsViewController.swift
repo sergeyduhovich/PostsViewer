@@ -57,6 +57,10 @@ class PostDetailsViewController: UIViewController {
     title = viewModel?.user.name
     bodyLabel.text = viewModel?.post.body
   }
+  
+  deinit {
+    print("\(#file) \(#function)")
+  }
 }
 
 extension PostDetailsViewController: UITableViewDataSource {
